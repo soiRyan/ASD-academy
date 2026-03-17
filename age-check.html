@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>年齢確認 | アスペ学園</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="age-page">
+  <div class="age-card">
+    <span class="age-crest">🎓</span>
+    <p class="age-academy-name">ASPE ACADEMY</p>
+    <h1 class="age-title">アスペ学園へようこそ</h1>
+    <div class="age-divider"></div>
+    <p class="age-desc">
+      ここは個性豊かな教師と生徒が集まる特別な学園です。<br>
+      本日はあなたを<strong style="color:var(--gold)">「一日特別見学者」</strong>としてお迎えします。
+    </p>
+    <p class="age-notice">※ このサイトは18歳以上の方のみ閲覧可能です。</p>
+    <div class="age-btns">
+      <button id="ageBtnYes" class="btn btn-gold" style="justify-content:center;">
+        ✦ 18歳以上です
+      </button>
+      <button id="ageBtnNo" class="btn btn-outline" style="justify-content:center;">
+        18歳未満です
+      </button>
+    </div>
+    <div id="ageDenied" class="age-denied">
+      <strong>🚫 アクセスできません</strong><br>
+      申し訳ありませんが、18歳未満の方はご覧いただけません。<br>
+      このページを閉じてください。
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

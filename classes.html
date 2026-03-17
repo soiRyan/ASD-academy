@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>本日の時間割 | アスペ学園</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">アスペ学園<span>ASPE ACADEMY</span></a>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="members.html">メンバー</a></li>
+      <li><a href="classes.html">時間割</a></li>
+      <li><a href="pricing.html">料金</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="rules.html">校則</a></li>
+      <li><a href="map.html">校内マップ</a></li>
+      <li><a href="access.html">アクセス</a></li>
+      <li><a href="reservation.html" class="nav-reserve">📝 予約する</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="page-hero">
+    <p class="page-hero-label">Today's Schedule</p>
+    <h1 class="page-hero-title">本日の時間割</h1>
+  </div>
+
+  <section class="section">
+    <div class="container" style="max-width:860px;">
+      <div class="section-header" data-a>
+        <span class="section-label">Schedule</span>
+        <h2 class="section-title">授業スケジュール</h2>
+        <p style="margin-top:1rem;font-size:0.88rem;color:rgba(245,240,232,0.6);">
+          各授業は担当教師が趣向を凝らした特別な内容でお届けします。<br>
+          ご希望の授業時間を選んでご予約ください。
+        </p>
+      </div>
+
+      <div class="timetable" data-a>
+        <div class="tt-row tt-header">
+          <div class="tt-period">時間</div>
+          <div class="tt-class">授業内容</div>
+          <div class="tt-teacher">担当</div>
+        </div>
+        <div class="tt-row">
+          <div class="tt-period">１時間目<small>20:00〜</small></div>
+          <div class="tt-class">🏃 体育<small>夜の運動会・アソコのフィジカルトレーニング</small></div>
+          <div class="tt-teacher">桑代タケシ先生</div>
+        </div>
+        <div class="tt-row">
+          <div class="tt-period">２時間目<small>21:30〜</small></div>
+          <div class="tt-class">🇺🇸 英語<small>ネイティブ英会話・アメリカンプレイレッスン</small></div>
+          <div class="tt-teacher">高木ジョセフまさと先生</div>
+        </div>
+        <div class="tt-row">
+          <div class="tt-period">３時間目<small>23:00〜</small></div>
+          <div class="tt-class">💊 保健<small>ベッドの上で心身のケア・癒しの時間</small></div>
+          <div class="tt-teacher">内田留先生</div>
+        </div>
+        <div class="tt-row">
+          <div class="tt-period">４時間目<small>24:30〜</small></div>
+          <div class="tt-class">🎵 音楽<small>夜のライブ・秘密のセッション</small></div>
+          <div class="tt-teacher">有川たくま先生</div>
+        </div>
+        <div class="tt-row tt-special">
+          <div class="tt-period">放課後<small>26:00〜</small></div>
+          <div class="tt-class">✦ 特別授業<small>校長・委員長による特別プログラム（要予約）</small></div>
+          <div class="tt-teacher">阿部校長 / ガンピン委員長</div>
+        </div>
+        <div class="tt-row">
+          <div class="tt-period">夜間<small>29:00〜</small></div>
+          <div class="tt-class">🌙 夜間コース<small>ご希望メンバーとのプライベートレッスン</small></div>
+          <div class="tt-teacher">選択制</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:2.5rem;" data-a>
+        <div style="background:rgba(22,32,50,0.7);border:1px solid var(--border);border-radius:8px;padding:1.4rem;">
+          <h3 style="color:var(--gold);font-size:0.97rem;margin-bottom:0.7rem;letter-spacing:0.1em;">📌 ご注意</h3>
+          <ul style="list-style:none;font-size:0.83rem;color:rgba(245,240,232,0.72);line-height:2.1;">
+            <li>・各授業は完全予約制です</li>
+            <li>・時間は多少前後する場合があります</li>
+            <li>・担当変更の場合はご連絡します</li>
+          </ul>
+        </div>
+        <div style="background:rgba(22,32,50,0.7);border:1px solid var(--border);border-radius:8px;padding:1.4rem;">
+          <h3 style="color:var(--gold);font-size:0.97rem;margin-bottom:0.7rem;letter-spacing:0.1em;">💡 授業について</h3>
+          <ul style="list-style:none;font-size:0.83rem;color:rgba(245,240,232,0.72);line-height:2.1;">
+            <li>・60分・90分・120分から選択可</li>
+            <li>・複数の授業をご予約いただけます</li>
+            <li>・指名オプションもご利用いただけます</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:2.5rem;" data-a>
+        <a href="reservation.html" class="btn btn-wine">📝 授業を予約する</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <p class="footer-logo">アスペ学園</p>
+  <p class="footer-sub">ASD ACADEMY</p>
+  <ul class="footer-links">
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="members.html">メンバー</a></li>
+    <li><a href="pricing.html">料金</a></li>
+    <li><a href="reservation.html">予約</a></li>
+  </ul>
+  <div class="footer-hr"></div>
+  <p class="footer-copy">&copy; 2025 アスペ学園 ASD ACADEMY. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

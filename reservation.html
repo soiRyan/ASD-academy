@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>授業予約 | アスペ学園</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">アスペ学園<span>ASPE ACADEMY</span></a>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="members.html">メンバー</a></li>
+      <li><a href="classes.html">時間割</a></li>
+      <li><a href="pricing.html">料金</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="rules.html">校則</a></li>
+      <li><a href="map.html">校内マップ</a></li>
+      <li><a href="access.html">アクセス</a></li>
+      <li><a href="reservation.html" class="nav-reserve">📝 予約する</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="page-hero">
+    <p class="page-hero-label">Reservation</p>
+    <h1 class="page-hero-title">授業予約</h1>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-a>
+        <span class="section-label">Book Your Session</span>
+        <h2 class="section-title">予約フォーム</h2>
+        <p style="margin-top:1rem;font-size:0.88rem;color:rgba(245,240,232,0.6);">
+          必要事項をご記入の上、送信してください。<br>
+          確認後、担当スタッフよりご連絡いたします。
+          <span style="color:var(--wine-light);">（※は必須項目）</span>
+        </p>
+      </div>
+
+      <div class="res-form-wrap" data-a>
+        <form id="resForm" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="fname">お名前<span class="req">※</span></label>
+              <input type="text" id="fname" class="form-input" placeholder="山田 太郎">
+              <p class="form-err" id="fname-err"></p>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="femail">メールアドレス<span class="req">※</span></label>
+              <input type="email" id="femail" class="form-input" placeholder="example@email.com">
+              <p class="form-err" id="femail-err"></p>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="fdate">希望日<span class="req">※</span></label>
+              <input type="date" id="fdate" class="form-input">
+              <p class="form-err" id="fdate-err"></p>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ftime">希望時間帯</label>
+              <select id="ftime" class="form-select">
+                <option value="">選択してください</option>
+                <option>10:00〜 （1時間目）</option>
+                <option>11:30〜 （2時間目）</option>
+                <option>13:00〜 （3時間目）</option>
+                <option>14:30〜 （4時間目）</option>
+                <option>16:00〜 （放課後）</option>
+                <option>19:00〜 （夜間コース）</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="fmember">希望メンバー<span class="req">※</span></label>
+              <select id="fmember" class="form-select">
+                <option value="">選択してください</option>
+                <option>阿部ゴキブリ巧真（校長先生）</option>
+                <option>ガンピン国家（３年 学級委員長）</option>
+                <option>内田留（保健室の先生）</option>
+                <option>桑代タケシ（体育の先生）</option>
+                <option>高木ジョセフまさと（ALT英語講師）</option>
+                <option>鶴間ライアン空生（２年生）</option>
+                <option>有川たくま（音楽の先生）</option>
+                <option>指名なし（おまかせ）</option>
+              </select>
+              <p class="form-err" id="fmember-err"></p>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="fcourse">コース</label>
+              <select id="fcourse" class="form-select">
+                <option value="">選択してください</option>
+                <option>60分コース — ¥20,000</option>
+                <option>90分コース — ¥28,000</option>
+                <option>120分コース — ¥36,000</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">オプション（複数選択可）</label>
+            <div style="display:flex;flex-wrap:wrap;gap:0.7rem;margin-top:0.3rem;">
+              <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.83rem;color:rgba(245,240,232,0.72);cursor:pointer;">
+                <input type="checkbox" style="accent-color:var(--gold);width:15px;height:15px;"> 指名料 (+¥3,000)
+              </label>
+              <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.83rem;color:rgba(245,240,232,0.72);cursor:pointer;">
+                <input type="checkbox" style="accent-color:var(--gold);width:15px;height:15px;"> 延長30分 (+¥8,000)
+              </label>
+              <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.83rem;color:rgba(245,240,232,0.72);cursor:pointer;">
+                <input type="checkbox" style="accent-color:var(--gold);width:15px;height:15px;"> 写真撮影追加 (+¥2,000)
+              </label>
+              <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.83rem;color:rgba(245,240,232,0.72);cursor:pointer;">
+                <input type="checkbox" style="accent-color:var(--gold);width:15px;height:15px;"> おもちゃ追加 (+¥2,000)
+              </label>
+              <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.83rem;color:rgba(245,240,232,0.72);cursor:pointer;">
+                <input type="checkbox" style="accent-color:var(--gold);width:15px;height:15px;">SMプレイ (+¥3,000)
+              </label>
+              <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.83rem;color:rgba(245,240,232,0.72);cursor:pointer;">
+                <input type="checkbox" style="accent-color:var(--gold);width:15px;height:15px;"> 1人追加 (+¥5,000)
+              </label>
+              <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.83rem;color:rgba(245,240,232,0.72);cursor:pointer;">
+                <input type="checkbox" style="accent-color:var(--gold);width:15px;height:15px;"> 特殊プレイ (+¥10,000)
+              </label>
+              <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.83rem;color:rgba(245,240,232,0.72);cursor:pointer;">
+                <input type="checkbox" style="accent-color:var(--gold);width:15px;height:15px;"> 生中出し (+¥25,000)
+              </label>
+              <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.83rem;color:rgba(245,240,232,0.72);cursor:pointer;">
+                <input type="checkbox" style="accent-color:var(--gold);width:15px;height:15px;"> プレミアム飲料 (+¥5,000)
+              </label>
+              <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.83rem;color:rgba(245,240,232,0.72);cursor:pointer;">
+                <input type="checkbox" style="accent-color:var(--gold);width:15px;height:15px;"> 特別授業 (+¥10,000)
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="fmsg">メッセージ・ご要望</label>
+            <textarea id="fmsg" class="form-textarea"
+              placeholder="ご要望・ご質問がございましたらご記入ください。&#10;例：初めて利用します / アレルギーがあります など"></textarea>
+          </div>
+
+          <div class="form-notice">
+            送信をもって、当学園の<a href="rules.html" style="color:var(--gold);">校則・利用規約</a>にご同意いただいたものとみなします。18歳以上の方のみご利用いただけます。
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-wine" style="padding:1rem 3rem;font-size:1rem;">
+              ✦ 予約を送信する
+            </button>
+          </div>
+        </form>
+
+        <div id="formSuccess" class="form-success">
+          <p style="font-size:3rem;margin-bottom:1rem;">🎓</p>
+          <h3>ご予約ありがとうございます！</h3>
+          <p style="margin-top:0.75rem;">
+            予約を受け付けました。<br>
+            ご登録のメールアドレスに確認メールをお送りいたします。<br>
+            担当スタッフより改めてご連絡いたしますので、<br>
+            しばらくお待ちください。
+          </p>
+          <div style="margin-top:2rem;">
+            <a href="index.html" class="btn btn-gold">🏠 ホームに戻る</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <p class="footer-logo">アスペ学園</p>
+  <p class="footer-sub">ASD ACADEMY</p>
+  <ul class="footer-links">
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="members.html">メンバー</a></li>
+    <li><a href="pricing.html">料金</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="reservation.html">予約</a></li>
+  </ul>
+  <div class="footer-hr"></div>
+  <p class="footer-copy">&copy; 2025 アスペ学園 ASD ACADEMY. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

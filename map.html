@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>校内マップ | アスペ学園</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">アスペ学園<span>ASPE ACADEMY</span></a>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="members.html">メンバー</a></li>
+      <li><a href="classes.html">時間割</a></li>
+      <li><a href="pricing.html">料金</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="rules.html">校則</a></li>
+      <li><a href="map.html">校内マップ</a></li>
+      <li><a href="access.html">アクセス</a></li>
+      <li><a href="reservation.html" class="nav-reserve">📝 予約する</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="page-hero">
+    <p class="page-hero-label">Campus Map</p>
+    <h1 class="page-hero-title">校内マップ</h1>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-a>
+        <span class="section-label">Floor Guide</span>
+        <h2 class="section-title">学園フロアガイド</h2>
+        <p style="margin-top:1rem;font-size:0.88rem;color:rgba(245,240,232,0.6);">各部屋をクリックすると詳細情報が表示されます。</p>
+      </div>
+
+      <div class="campus-map" data-a>
+
+        <!-- Visual Map -->
+        <div class="map-visual">
+          <span class="map-visual-label">ASPE ACADEMY — FLOOR PLAN</span>
+
+          <!-- Horizontal corridor -->
+          <div class="map-corridor" style="left:10%;right:10%;top:49%;height:7%;border-radius:3px;"></div>
+
+          <!-- Rooms -->
+          <div class="map-room" data-room="principal"
+               style="left:8%;top:14%;width:23%;height:27%;"
+               onclick="mapHighlight('principal')">
+            🎓<br>校長室
+          </div>
+          <div class="map-room" data-room="infirmary"
+               style="left:38%;top:14%;width:24%;height:27%;"
+               onclick="mapHighlight('infirmary')">
+            💊<br>保健室
+          </div>
+          <div class="map-room" data-room="music"
+               style="left:69%;top:14%;width:23%;height:27%;"
+               onclick="mapHighlight('music')">
+            🎵<br>音楽室
+          </div>
+          <div class="map-room" data-room="classroom"
+               style="left:8%;top:62%;width:34%;height:28%;"
+               onclick="mapHighlight('classroom')">
+            📚<br>教室
+          </div>
+          <div class="map-room" data-room="gym"
+               style="left:54%;top:62%;width:38%;height:28%;"
+               onclick="mapHighlight('gym')">
+            🏃<br>体育館
+          </div>
+
+          <span class="map-entrance">▼ 入口</span>
+        </div>
+
+        <!-- Location Cards -->
+        <div class="map-loc-list">
+          <div class="map-loc-card" id="loc-principal" data-room="principal" onclick="mapHighlight('principal')">
+            <span class="map-loc-icon">🎓</span>
+            <div class="map-loc-info">
+              <h4>校長室</h4>
+              <p>阿部ゴキブリ巧真校長の執務室。重厚な雰囲気漂う特別な空間。アポイントメントが必要。</p>
+            </div>
+          </div>
+          <div class="map-loc-card" id="loc-infirmary" data-room="infirmary" onclick="mapHighlight('infirmary')">
+            <span class="map-loc-icon">💊</span>
+            <div class="map-loc-info">
+              <h4>保健室</h4>
+              <p>内田留先生が常駐する癒しの空間。体や心の不調もここで回復できる。</p>
+            </div>
+          </div>
+          <div class="map-loc-card" id="loc-gym" data-room="gym" onclick="mapHighlight('gym')">
+            <span class="map-loc-icon">🏃</span>
+            <div class="map-loc-info">
+              <h4>体育館</h4>
+              <p>桑代タケシ先生担当の体育授業会場。広々とした空間でスポーツを楽しめる。</p>
+            </div>
+          </div>
+          <div class="map-loc-card" id="loc-music" data-room="music" onclick="mapHighlight('music')">
+            <span class="map-loc-icon">🎵</span>
+            <div class="map-loc-info">
+              <h4>音楽室</h4>
+              <p>有川たくま先生が奏でる音楽が響く部屋。グランドピアノとギターが設置されている。</p>
+            </div>
+          </div>
+          <div class="map-loc-card" id="loc-classroom" data-room="classroom" onclick="mapHighlight('classroom')">
+            <span class="map-loc-icon">📚</span>
+            <div class="map-loc-info">
+              <h4>教室</h4>
+              <p>英語・各種授業が行われるメイン教室。ガン委員長が取り仕切る整然とした空間。</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <p class="footer-logo">アスペ学園</p>
+  <p class="footer-sub">ASD ACADEMY</p>
+  <ul class="footer-links">
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="members.html">メンバー</a></li>
+    <li><a href="pricing.html">料金</a></li>
+    <li><a href="reservation.html">予約</a></li>
+  </ul>
+  <div class="footer-hr"></div>
+  <p class="footer-copy">&copy; 2025 アスペ学園 ASD ACADEMY. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
